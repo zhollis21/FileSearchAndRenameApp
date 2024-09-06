@@ -34,16 +34,20 @@ jobs:
     - name: Zip published files
       run: |
         sudo apt-get install -y zip  # Install zip utility if not present
-        zip -r FileSearchAndRename_WindowsBuild.zip ./publish  # Create a zip file from the publish directory
+        zip -r my-app.zip ./publish  # Create a zip file from the publish directory
 
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v4
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
       with:
-        name: File Search and Rename (Windows Build)
-        path: FileSearchAndRename_WindowsBuild.zip
+        name: my-app
+        path: my-app.zip  # Upload the zip file instead of the directory
 
-    - name: Create release
-      id: create_release
+    - name: List the files
+      run: ls -al
+
+    - name: Create GitHub release
       uses: softprops/action-gh-release@v2
       with:
-        files: ./publish/FileSearchAndRename_WindowsBuild.zip
+        files: my-app.zip  # Attach the zip file to the release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
