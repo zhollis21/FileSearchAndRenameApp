@@ -31,14 +31,19 @@ jobs:
     - name: Publish
       run: dotnet publish FileSearchAndRenameApp.sln --configuration Release --output ./publish --self-contained --runtime win-x64
 
+    - name: Zip published files
+      run: |
+        sudo apt-get install -y zip  # Install zip utility if not present
+        zip -r FileSearchAndRename_WindowsBuild.zip ./publish  # Create a zip file from the publish directory
+
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
         name: File Search and Rename (Windows Build)
-        path: ./publish
+        path: FileSearchAndRename_WindowsBuild.zip
 
     - name: Create release
       id: create_release
       uses: softprops/action-gh-release@v2
       with:
-        files: ./publish/*
+        files: ./publish/FileSearchAndRename_WindowsBuild.zip
