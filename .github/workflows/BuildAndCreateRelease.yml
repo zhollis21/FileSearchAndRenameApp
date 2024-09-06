@@ -35,7 +35,7 @@ jobs:
       run: |
         sudo apt-get install -y zip  # Install zip utility if not present
         cd publish  # Change to the publish directory
-        zip -r FileSearchAndRenameApp.zip .  # Zip the contents of the publish directory
+        zip -r ../FileSearchAndRenameApp.zip .  # Zip the contents of the publish directory
         cd ..  # Change back to the previous directory
 
     - name: Upload build artifacts
