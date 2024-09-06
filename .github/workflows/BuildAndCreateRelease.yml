@@ -34,7 +34,9 @@ jobs:
     - name: Zip published files
       run: |
         sudo apt-get install -y zip  # Install zip utility if not present
-        zip -r FileSearchAndRenameApp.zip ./publish  # Create a zip file from the publish directory
+        cd publish  # Change to the publish directory
+        zip -r ../my-app.zip .  # Zip the contents of the publish directory
+        cd ..  # Change back to the previous directory
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
