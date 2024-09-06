@@ -11,6 +11,7 @@ on:
   pull_request:
     branches: 
     - main # Run for branches targeting main
+    - release/*
 
 jobs:
   build:
