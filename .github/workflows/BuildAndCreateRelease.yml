@@ -34,13 +34,13 @@ jobs:
     - name: Zip published files
       run: |
         sudo apt-get install -y zip  # Install zip utility if not present
-        zip -r my-app.zip ./publish  # Create a zip file from the publish directory
+        zip -r FileSearchAndRenameApp.zip ./publish  # Create a zip file from the publish directory
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: my-app
-        path: my-app.zip  # Upload the zip file instead of the directory
+        name: FileSearchAndRenameApp
+        path: FileSearchAndRenameApp.zip  # Upload the zip file instead of the directory
 
     - name: List the files
       run: ls -al
@@ -48,6 +48,6 @@ jobs:
     - name: Create GitHub release
       uses: softprops/action-gh-release@v2
       with:
-        files: my-app.zip  # Attach the zip file to the release
+        files: FileSearchAndRenameApp.zip  # Attach the zip file to the release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
