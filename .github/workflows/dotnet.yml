@@ -1,13 +1,17 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: .NET
+name: Build and Test .NET Solution
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+    - main
+    - release/*
   pull_request:
-    branches: [ "main" ]
+    branches: 
+    - main # Run for branches targeting main
+    - release/*
 
 jobs:
   build:
