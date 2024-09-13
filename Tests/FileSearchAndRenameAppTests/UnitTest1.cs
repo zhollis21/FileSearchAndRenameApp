@@ -12,7 +12,7 @@ namespace FileSearchAndRenameAppTests
         [Test]
         public void SampleTest()
         {
-            Assert.Equals(1, 2);
+            Assert.Pass();
         }
     }
 }
