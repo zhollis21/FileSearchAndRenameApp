@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSearchAndRenameApp", "FileSearchAndRenameApp.csproj", "{94611FB0-F0A1-4B89-9044-79B661326FF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileSearchAndRenameApp", "FileSearchAndRenameApp.csproj", "{94611FB0-F0A1-4B89-9044-79B661326FF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{052119C3-E057-4D0C-836C-8877111E5C33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{BE3BF766-FF4C-46A2-B8AA-B13B658BE374}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{20D5BA3B-BF76-4E6D-B868-AE32A2D3BAA4}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\BuildAndCreateRelease.yml = .github\workflows\BuildAndCreateRelease.yml
+		.github\workflows\BuildAndTest.yml = .github\workflows\BuildAndTest.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSearchAndRenameAppTests", "Tests\FileSearchAndRenameAppTests\FileSearchAndRenameAppTests.csproj", "{F4F63168-5574-42F8-A14B-DCD777EA7185}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +27,17 @@ Global
 		{94611FB0-F0A1-4B89-9044-79B661326FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94611FB0-F0A1-4B89-9044-79B661326FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94611FB0-F0A1-4B89-9044-79B661326FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4F63168-5574-42F8-A14B-DCD777EA7185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F63168-5574-42F8-A14B-DCD777EA7185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F63168-5574-42F8-A14B-DCD777EA7185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F63168-5574-42F8-A14B-DCD777EA7185}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE3BF766-FF4C-46A2-B8AA-B13B658BE374} = {052119C3-E057-4D0C-836C-8877111E5C33}
+		{20D5BA3B-BF76-4E6D-B868-AE32A2D3BAA4} = {BE3BF766-FF4C-46A2-B8AA-B13B658BE374}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13555117-59D7-43A5-87AC-136F0E33497E}

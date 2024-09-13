@@ -44,9 +44,6 @@ jobs:
         name: FileSearchAndRenameApp
         path: FileSearchAndRenameApp.zip  # Upload the zip file instead of the directory
 
-    - name: List the files
-      run: ls -al
-
     - name: Create GitHub release
       uses: softprops/action-gh-release@v2
       with:
