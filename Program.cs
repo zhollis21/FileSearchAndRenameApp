@@ -35,12 +35,12 @@ internal class Program
             dirPath = Console.ReadLine();
         }
 
-        RenameFilesAndDirectories(dirPath, searchTerm, replaceTerm);
+        ProcessDirectory(dirPath, searchTerm, replaceTerm);
     }
 
     // Process all files in the directory passed in, recurse on any directories
     // that are found, and process the files they contain.
-    public static void RenameFilesAndDirectories(string targetDirectory, string searchTerm, string replaceTerm)
+    public static void ProcessDirectory(string targetDirectory, string searchTerm, string replaceTerm)
     {
         // Process the list of files found in the directory.
         string[] directories = Directory.GetDirectories(targetDirectory, $"*{searchTerm}*", SearchOption.AllDirectories);
