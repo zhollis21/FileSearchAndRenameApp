@@ -10,7 +10,8 @@ internal class Program
         var dirPath = Console.ReadLine();
         while (!Directory.Exists(dirPath))
         {
-            Console.Write("Invalid directory, try again: ")
+            Console.Write("Invalid directory, try again: ");
+
 
             dirPath = Console.ReadLine();
         }
