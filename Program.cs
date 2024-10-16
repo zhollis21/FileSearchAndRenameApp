@@ -12,6 +12,7 @@ internal class Program
         {
             Console.Write("Invalid directory, try again: ");
 
+
             dirPath = Console.ReadLine();
         }
 
